@@ -7,5 +7,12 @@ Random bystanders will also be generated on the screen. If the player shoots a b
 
 # Functionality & MVPs:
 
-In Alien Invasion, there are several core features in game play. Players will be able to use their mouse to shoot aliens with a blast cannon. The cursor will be the aiming mark. Clicking will discharge the blast cannon. Random alien generation will also be a core feature. Animation will also be featured.
+In Alien Invasion, there are several core features in game play. 
+* Players will be able to use their mouse to shoot aliens with a blast cannon. 
+* The cursor will be the aiming mark. Clicking will discharge the blast cannon. 
+* Random alien generation will also be a core feature. 
+* Animation will also be featured.
 
+# Wire Frame
+
+<img src = "wire.pg">
