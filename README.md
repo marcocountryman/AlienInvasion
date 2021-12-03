@@ -13,7 +13,7 @@ In Alien Invasion, there are several core features in game play.
 * Random alien generation will also be a core feature. 
 * Animation will also be featured.
 
-# Wire Frame
+# Wire Frame:
 
 <img src = "wire.png">
 
@@ -23,7 +23,7 @@ In Alien Invasion, there are several core features in game play.
 * Canvas API
 * Webpack
 
-# Implementation Timeline
+# Implementation Timeline:
 
 * Friday & Weekend: Create proper files, canvas, and work random generation logic.
 * Monday: Add more levels.
