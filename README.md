@@ -17,7 +17,12 @@ In Alien Invasion, there are several core features in game play.
 
 <img src = "wire.png">
 
-# Technology
+* Nav links will include link to project repo on Github, my LinkedIn, and the About modal.
+* Game controls will be entirely conducted by mouse.
+* On the top left, the player's health will be displayed.
+* On the top right, the number of aliens blasted.
+
+# Technology:
 
 * HTML, CSS, Javascript
 * Canvas API
@@ -25,8 +30,8 @@ In Alien Invasion, there are several core features in game play.
 
 # Implementation Timeline:
 
-* Friday & Weekend: Create proper files, canvas, and work random generation logic.
-* Monday: Add more levels.
-* Tuesday: Make it pretty, animations.
-* Wednesday: Add sound effects, play, and debug.
+* Friday & Weekend: Generate file structure and webpack. Create view class, alien class, player class, and civilian class. Get classes rendered on screen and doing appopriate actions.
+* Monday: Fine tune the classes being rendered. Add additional levels.
+* Tuesday: Continue working on additional level logic and add animations to make game more lively.
+* Wednesday: Add sound effects and finishing touches.
 * Thursday Morning: Presentation prep.
