@@ -1,0 +1,38 @@
+{
+  "name": "alienInvasion",
+  "version": "1.0.0",
+  "description": "Alien invasion is a click based shooting game. The city is being overrun by an alien invasion. The player will be ambushed by aliens armed with lasers. Aliens will randomly generate on the screen, after a brief delay, the randomly generated alien will shoot a laser at the player. The player must shoot the alien before being shot by the laser. A single shot will neutralize the alien. The player will lose health each time an alien lands a successful laser shot.",
+  "main": "index.js",
+  "browerslist": [
+    "defaults"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch --mode=development",
+    "build": "webpack --mode=production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcocountryman/alienInvasion.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marcocountryman/alienInvasion/issues"
+  },
+  "homepage": "https://github.com/marcocountryman/alienInvasion#readme",
+  "dependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "babel-loader": "^8.2.3",
+    "core-js": "^3.19.2",
+    "css-loader": "^6.5.1",
+    "mini-css-extract-plugin": "^2.4.5",
+    "regenerator-runtime": "^0.13.9",
+    "sass": "^1.44.0",
+    "sass-loader": "^12.3.0",
+    "webpack": "^5.64.4",
+    "webpack-cli": "^4.9.1"
+  }
+}
