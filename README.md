@@ -15,4 +15,4 @@ In Alien Invasion, there are several core features in game play.
 
 # Wire Frame
 
-<img src = "wire.pg">
+<img src = "wire.png">
