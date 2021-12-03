@@ -35,4 +35,4 @@ In Alien Invasion, there are several core features in game play.
 * Monday: Fine tune the classes being rendered. Add additional levels.
 * Tuesday: Continue working on additional level logic and add animations to make game more lively.
 * Wednesday: Add sound effects and finishing touches.
-* Thursday Morning: Presentation prep.
+* Thursday Morning: Final touches on game before upload to heroku. Presentation prep.
