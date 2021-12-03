@@ -16,3 +16,17 @@ In Alien Invasion, there are several core features in game play.
 # Wire Frame
 
 <img src = "wire.png">
+
+# Technology
+
+* HTML, CSS, Javascript
+* Canvas API
+* Webpack
+
+# Implementation Timeline
+
+* Friday & Weekend: Create proper files, canvas, and work random generation logic.
+* Monday: Add more levels/
+* Tuesday: Make it pretty, animations.
+* Wednesday: Add sound effects, play, and debug.
+* Thursday Morning: Presentation prep.
