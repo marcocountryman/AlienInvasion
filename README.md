@@ -19,6 +19,7 @@ In Alien Invasion, there are several core features in game play.
 
 * Nav links will include link to project repo on Github, my LinkedIn, and the About modal.
 * Game controls will be entirely conducted by mouse.
+* The cursor will assist players in aiming.
 * On the top left, the player's health will be displayed.
 * On the top right, the number of aliens blasted.
 
