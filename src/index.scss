@@ -1,5 +1,28 @@
 #alien-canvas {
-    width: 800px;
-    height: 500px;
     background-color: greenyellow;
+    width: 800px;
+    height: 600px;
+    text-align: center;
+    border: 10px solid navy;
+    border-radius: 25px;
+}
+.canvas-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.header {
+    color: lightpink;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    background-color: indigo;
+}
+.links {
+    display: flex;
+    justify-content: space-evenly;
+    width: 250px;
+}
+body {
+    background-color: lightblue;
 }
