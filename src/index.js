@@ -12,12 +12,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const alien5 = new Alien({pos: [50,80], size:[40,25],color: "pink"});
     const alien6 = new Alien({pos: [200,80], size:[40,25],color: "pink"});
     const aliens = [alien1,alien2,alien3,alien3]
-    alien1.draw(ctx)
-    alien2.draw(ctx)
-    alien3.draw(ctx)
-    alien4.draw(ctx)
-    alien5.draw(ctx)
-    alien6.draw(ctx)
+    // alien1.draw(ctx)
+    // alien2.draw(ctx)
+    // alien3.draw(ctx)
+    // alien4.draw(ctx)
+    // alien5.draw(ctx)
+    // alien6.draw(ctx)
 
     // setInterval(alien1.draw)
 
