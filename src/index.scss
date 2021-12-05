@@ -1,10 +1,13 @@
 #alien-canvas {
-    background-color: white;
+    background-image: url('./images/foodMarketBackground.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     width: 800px;
     height: 600px;
     text-align: center;
-    border: 10px solid navy;
-    border-radius: 25px;
+    // border: 10px solid navy;
+    // border-radius: 25px;
 }
 .canvas-container {
     display: flex;
