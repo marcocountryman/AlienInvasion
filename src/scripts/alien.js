@@ -1,19 +1,17 @@
 class Alien {
-    constructor(object) {
-        this.pos = object.pos;
-        this.size = object.size;
-        this.color = object.color
-        // this.alive = "yes"
-        // const img = new Image();
-        // img.source = "./images/alien.png"
+    constructor(pos,size,color) {
+        this.pos = pos;
+        this.size = size;
+        this.color = color;
         
     }
     draw(ctx) {
         ctx.fillStyle = this.color;
-        ctx.fillRect(this.pos[0], this.pos[1],this.size[0],this.size[1]);
+        ctx.fillRect(this.pos[0],this.pos[1],this.size,this.color);
     }
-    shoot() {
-        setTimeout() {}
-    }
+    // shoot() {
+       
+    // }
+    
 }
 export default Alien;
