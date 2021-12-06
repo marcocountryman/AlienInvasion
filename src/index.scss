@@ -1,13 +1,13 @@
 #alien-canvas {
-    background-image: url('./images/foodMarketBackground.png');
+    background-image: url("../images/background.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     width: 800px;
     height: 600px;
     text-align: center;
-    // border: 10px solid navy;
-    // border-radius: 25px;
+    border: solid orange 5px;
+    border-radius: 25px;
 }
 .canvas-container {
     display: flex;
@@ -15,11 +15,12 @@
     margin-top: 50px;
 }
 .header {
-    color: white;
+    color: #8A2BE2;
+    font-family: 'Nova Script', cursive;
     font-size: 50px;
     display: flex;
     justify-content: center;
-    background-color: indigo;
+    background-color: black;
 }
 .links {
     display: flex;
@@ -27,5 +28,5 @@
     width: 250px;
 }
 body {
-    background-color: lightblue;
+  background-color: black;
 }

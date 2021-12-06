@@ -5,12 +5,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const canvasEl = document.getElementById('alien-canvas');
     const ctx = canvasEl.getContext('2d');
    
-    // const civ = new Civilian([200,20],[40,50],'orange');
-    // const alien = new Alien([200,80],[40,50],'pink');
-    const newGame = new Game();
-    const character = newGame.randomCharacter();
-    character.draw(ctx);
-    character.response(ctx);
 
-   
+    const newGame = new Game();
+    newGame.characterSequence(ctx);
+    const char = newGame.randomCharacter();
+    // char.draw(ctx);
+    // ctx.clearRect(0,0,800,600)
+
 });

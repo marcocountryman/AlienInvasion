@@ -5,7 +5,7 @@ class Civilian {
         this.color = color;    
     }
     draw(ctx) {
-        ctx.fillStyle = this.color;
+        ctx.fillStyle = 'orange'
         ctx.fillRect(this.pos[0], this.pos[1],this.size[0],this.size[1]);
     }
     response(ctx) {
@@ -17,7 +17,7 @@ class Civilian {
             shoot,
             1000
         )
-        
+        // ctx.clearRect(0,0,800,600)
     }
 }
 export default Civilian;
