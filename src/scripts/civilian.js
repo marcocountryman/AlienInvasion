@@ -6,13 +6,13 @@ class Civilian {
         this.status = "alive";    
     }
     draw(ctx) {
-        // ctx.fillStyle = 'orange'
-        // ctx.fillRect(this.pos[0], this.pos[1],this.size[0],this.size[1]);
+        ctx.fillStyle = 'orange'
+        ctx.fillRect(this.pos[0], this.pos[1],this.size[0],this.size[1]);
 
 
-        var img = new Image();
-        img.src = "images/scaredwoman.png";
-         ctx.drawImage(img, this.pos[0],this.pos[1],this.size[0],this.size[1]);
+        // var img = new Image();
+        // img.src = "images/scaredwoman.png";
+        //  ctx.drawImage(img, this.pos[0],this.pos[1],this.size[0],this.size[1]);
     }
     response(ctx) {
         const shoot = function() {

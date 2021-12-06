@@ -35,9 +35,9 @@ class Alien {
     hitCheck(x,y) {
         if (x > this.pos[0] && x < this.pos[0] + this.size[0] && 
             y > this.pos[1] && y < this.pos[1] + this.size[1]) {
-                console.log('hit');
+           return true
         } else {
-            console.log('miss');
+           return false;
         }
     }
 }
