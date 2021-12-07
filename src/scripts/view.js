@@ -7,7 +7,7 @@ class View {
     }
     //STARTS GAME
     start() {
-        this.game.characterRun(this.context);
+        this.game.characterSequence(this.context);
     }
 }
 export default View;

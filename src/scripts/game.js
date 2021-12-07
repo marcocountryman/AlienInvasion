@@ -39,7 +39,7 @@ class Game {
     randomCharacter() {
         const randomAlien = this.randomAlien();
         const randomCivilian = this.randomCivilian();
-        const randomCall = [randomAlien,randomCivilian,randomAlien, randomAlien];
+        const randomCall = [randomAlien,randomCivilian,randomAlien, randomAlien, randomAlien];
         this.shuffle(randomCall)
         const pos = Math.floor(Math.random() * 3);
         return randomCall[pos]
@@ -61,76 +61,92 @@ class Game {
         }
         return array;
     }
-    //THIS IS A TEST FUNCTION NOT WORK THE WAY I INTEND AT THE MOMENT.
+    //THIS IS A TEST FUNCTION IT DOES NOT WORK THE WAY I INTEND AT THE MOMENT.
+    //
+
+
     characterSequence(ctx) {
-        const boundedRandom = this.randomCharacter.bind(this);
-        const randomGeneration = function() {
-        const character = boundedRandom();
-            character.draw(ctx);
-  
-            if (character.hitCheck()) {
-                character.dead(ctx);
+    
+        let intCount = 0;
+
+        const gameRun = function() {
+            
+            let randChar = this.characters.pop()
+            randChar.draw(ctx);
+            
+            intCount += 1
+            if (intCount === 15) {
+                alert('level clear');
+                clearInterval(intId);
             }
-        }
-        setInterval(randomGeneration,2200);
-       
+            this.canvas.addEventListener('click',(e) => {
+            const rect = this.canvas.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+                if (randChar.hitCheck(x,y)) {
+                    if (randChar instanceof Civilian) {
+                        alert('game over')
+                    }
+                    randChar.dead(ctx);
+                    console.log('hit');
+                 
+                } else {
+                    console.log('miss');
+                }
+            });
+        }.bind(this);
+
+        var intId1 = setInterval(gameRun,2200);
+      
     }
     
     //THIS FUNCTION WILL REMOVE DEAD ENEMIES FROM THE CHARACTER ARRAY.
+    //NOT IN USE CURRENTLY.
     removeTheDead() { 
         for (let i = 0; i < this.characters.length; i++) {
-            if (this.characters[i].status === 'dead') {
+            if (!this.characters[i].alive) {
                 this.characters.splice(i,1);
             }
         }
     }
-    
-    
-    gameOver() {
-        if (this.player.lives === 0) {
-            this.gameover = true;
-        }
-    }
+    // gameOver() {
+    //     if (this.player.lives === 0) {
+    //         this.gameover = true;
+    //     }
+    // }
+
+    // THIS FUNCTION IS RENDERING SEQUENCE AND CAN DETECT HITS HOWEVER
+    //THE RECURSIVE CALL NEEDS MORE LOGIC AND TRIGERRING MULTIPLE HITS IN A SINGLE SEQUENCE
+    //ALTHOUGH THIS FUNCTION IS NOT OPERATIONAL IT DID TAKE SOME TIME TO BUILD
+    //SO HERE IT WILL REMAIN TO COMMEMORATE THE HARD WORK DONE IN THIS PROJECT.
     characterRun(ctx) {
+        if (!this.characters) alert('Game Win');
+        // this.removeTheDead();
+        // const randNum = Math.floor(Math.random() * this.characters.length);
+        // const randChar = this.characters[randNum];
+        // const that = this;
 
-        this.removeTheDead();
-
-        const randNum = Math.floor(Math.random() * this.characters.length);
-        const randChar = this.characters[randNum];
-        const that = this;
-
-
+        const currentChar = this.characters.pop();
+        currentChar.draw(ctx);
+        
         this.canvas.addEventListener('click',(e) => {
         const rect = this.canvas.getBoundingClientRect();
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
 
-            if (randChar.hitCheck(x,y)) {
-                randChar.dead(ctx);
+            if (currentChar.hitCheck(x,y)) {
+                currentChar.dead(ctx);
                 console.log('hit');
             } else {
                 console.log('miss');
             }
-            // console.log(this.characters);
         });
-
-            setTimeout(function() {
-                randChar.draw(ctx);
-                that.characterRun(ctx);
-            },3000)
-
+        setTimeout(function() {
+            nextChar;
+        },3000);
     }
 
-
-
 }
-//   canvasEl.addEventListener('click',(e) => {
-//         const rect = canvasEl.getBoundingClientRect();
-//         const x = e.clientX - rect.left;
-//         const y = e.clientY - rect.top;
-//         if (char.hitCheck(x,y)) {
-//             char.dead(ctx);
-//             alert('hit')
-//         }
-//     });
+
 export default Game;

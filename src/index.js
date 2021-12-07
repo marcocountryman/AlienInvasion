@@ -7,23 +7,19 @@ document.addEventListener("DOMContentLoaded", function () {
     
     const newGame = new Game(canvasEl);
 
-    // newGame.characterRun(ctx);
-    // newGame.characterSequence(ctx);
-
+    const gameView = new View(newGame,ctx,canvasEl);
+    gameView.start();
     
     
     
-    // const gameView = new View(newGame,ctx,canvasEl);
-    // gameView.start()
+    
+    
+    
     
     
     // const char = newGame.randomCharacter();
     // char.draw(ctx);
     
-
-
-
-
     //THE FUNCTION BELOW IS IMPORTANT DO NOT DELETE IT IS WORKING
     //AND DETECTING THE HITS
 
@@ -38,6 +34,4 @@ document.addEventListener("DOMContentLoaded", function () {
     //         console.log('miss');
     //     }
     // });
-
-
 });
