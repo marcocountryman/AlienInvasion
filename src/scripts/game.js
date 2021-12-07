@@ -17,13 +17,11 @@ class Game {
     randomAlien() {
         const randomPosition = Math.floor(Math.random() * POSITIONS.length)
         const alien = new Alien(POSITIONS[randomPosition], CHARACTER_SIZE);
-        this.aliens.push(alien);
         return alien;
     }
     randomCivilian() {
         const randomPosition = Math.floor(Math.random() * POSITIONS.length)
         const civilian = new Civilian(POSITIONS[randomPosition], CHARACTER_SIZE);
-        this.civilians.push(civilian);
         return civilian;
     }
     randomCharacter() {
@@ -34,6 +32,21 @@ class Game {
         const pos = Math.floor(Math.random() * 3);
         return randomCall[pos]
     }
+    fillCharacters() {
+        for (let i = 0; i < 15; i++) {
+            let character = this.randomCharacter();
+            if (character instanceof Alien) {
+                this.aliens.push(character);
+            } else {
+                this.civilians.push(character)
+            }
+        }
+        const characters = this.aliens.concat(this.civilians);
+        for (let i = 0; i < 3; i++) {
+            this.shuffle(characters);
+        }
+        return characters;
+    }
     shuffle(array) {
         for (let i = 0; i < array.length; i++) {
             let j = Math.floor(Math.random() * (i + 1));
@@ -43,28 +56,62 @@ class Game {
         }
         return array;
     }
+
     characterSequence(ctx) {
         const boundedRandom = this.randomCharacter.bind(this);
         const randomGeneration = function() {
-            const character = boundedRandom();
+        const character = boundedRandom();
             character.draw(ctx);
-            character.response(ctx);
-            // character.hitCheck()
+            // character.response(ctx);
+            if (character.hitCheck()) {
+                character.dead(ctx);
+            }
         }
-       setInterval(randomGeneration, 2000);
+        setInterval(randomGeneration,2200);
+       
     }
+    //the purpose of this function is to clean out all the dead enemies
+    //from the character array might need this later
+    //tested and removes characters from array
+    removeTheDead() {
+        const characters = this.fillCharacters();
+        
+        for (let i = 0; i < characters.length; i++) {
+            if (characters[i].status === 'dead') {
+                characters.splice(i,1);
+            }
+        }
+    }
+    
     gameOver() {
         if (this.player.lives === 0) {
             this.gameover = true;
         }
     }
-    
+    start() {
+
+    }
+    // characterRun(ctx) {
+    //     const characters = this.fillCharacters();
+
+    //     characters.forEach(function(char) {
+            
+    //     })
+    // }
+
+
+
 }
-// const canvas = document.getElementById('alien-canvas');
-//  canvas.addEventListener('click',(e) => {
+//   canvasEl.addEventListener('click',(e) => {
 //         const rect = canvasEl.getBoundingClientRect();
 //         const x = e.clientX - rect.left;
 //         const y = e.clientY - rect.top;
-//         alien.hitCheck(x,y)
-// })
+//         if (char.hitCheck(x,y)) {
+//             char.dead(ctx);
+//             alert('hit')
+//         }
+//     });
 export default Game;
+
+// run through characters array if player is still alive after
+// characters all run through then the player passes the round.
