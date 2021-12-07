@@ -5,6 +5,7 @@ class View {
         this.context = context;
         this.canvas = canvas;
     }
+    //STARTS GAME
     start() {
         this.game.characterRun(this.context);
     }

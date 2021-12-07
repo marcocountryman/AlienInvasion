@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const newGame = new Game(canvasEl);
 
     // newGame.characterRun(ctx);
-
     // newGame.characterSequence(ctx);
 
     
@@ -18,8 +17,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // gameView.start()
     
     
-    const char = newGame.randomCharacter();
-    char.draw(ctx);
+    // const char = newGame.randomCharacter();
+    // char.draw(ctx);
     
 
 
@@ -28,19 +27,17 @@ document.addEventListener("DOMContentLoaded", function () {
     //THE FUNCTION BELOW IS IMPORTANT DO NOT DELETE IT IS WORKING
     //AND DETECTING THE HITS
 
-    canvasEl.addEventListener('click',(e) => {
-        const rect = canvasEl.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        if (char.hitCheck(x,y)) {
-            char.dead(ctx);
-            console.log('hit');
-        } else{
-            console.log('miss');
-        }
-    });
- 
+    // canvasEl.addEventListener('click',(e) => {
+    //     const rect = canvasEl.getBoundingClientRect();
+    //     const x = e.clientX - rect.left;
+    //     const y = e.clientY - rect.top;
+    //     if (char.hitCheck(x,y)) {
+    //         char.dead(ctx);
+    //         console.log('hit');
+    //     } else{
+    //         console.log('miss');
+    //     }
+    // });
+
+
 });
-// document.addEventListener('click', function(e) {
-//        console.log(e.clientX, e.clientY);
-// })
