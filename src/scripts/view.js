@@ -6,7 +6,7 @@ class View {
         this.canvas = canvas;
     }
     start() {
-        this.game.characterSequence(this.context);
+        this.game.characterRun(this.context);
     }
 }
 export default View;

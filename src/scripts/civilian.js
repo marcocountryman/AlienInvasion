@@ -28,7 +28,7 @@ class Civilian {
         }.bind(this);
         setTimeout(
             shoot,
-            250
+            300
         )
         // ctx.clearRect(0,0,800,600)
     }

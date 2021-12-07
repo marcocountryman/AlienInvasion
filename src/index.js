@@ -4,20 +4,23 @@ import Game from "./scripts/game.js"
 document.addEventListener("DOMContentLoaded", function () {
     const canvasEl = document.getElementById('alien-canvas');
     const ctx = canvasEl.getContext('2d');
-    const newGame = new Game();
+    
+    const newGame = new Game(canvasEl);
 
     // newGame.characterRun(ctx);
-    // const alien = newGame.randomAlien();
-    // let chars = newGame.fillCharacters();
+
     // newGame.characterSequence(ctx);
-    // const char = newGame.randomCharacter()
-    // char.draw(ctx);
-    // alien.draw(ctx);
+
+    
+    
     
     // const gameView = new View(newGame,ctx,canvasEl);
     // gameView.start()
-
-   
+    
+    
+    const char = newGame.randomCharacter();
+    char.draw(ctx);
+    
 
 
 
@@ -31,7 +34,9 @@ document.addEventListener("DOMContentLoaded", function () {
         const y = e.clientY - rect.top;
         if (char.hitCheck(x,y)) {
             char.dead(ctx);
-            alert('hit')
+            console.log('hit');
+        } else{
+            console.log('miss');
         }
     });
  

@@ -8,11 +8,13 @@ const POSITIONS = [[10,314],[600,400],[415,370],[215,390]];
 //[[600,400],[415,370],[215,390]]
 class Game {
     
-    constructor(player) {
+    constructor(canvasEl) {
         this.aliens = [];
         this.civilians = [];
-        this.player = player;
+        // this.player = player;
         this.gameover = false;
+        this.canvas = canvasEl;
+        this.characters = [];
     }
     randomAlien() {
         const randomPosition = Math.floor(Math.random() * POSITIONS.length)
@@ -83,6 +85,7 @@ class Game {
         }
     }
     
+    
     gameOver() {
         if (this.player.lives === 0) {
             this.gameover = true;
@@ -91,13 +94,36 @@ class Game {
     start() {
 
     }
-    // characterRun(ctx) {
-    //     const characters = this.fillCharacters();
+    characterRun(ctx) {
 
-    //     characters.forEach(function(char) {
-            
-    //     })
-    // }
+        this.removeTheDead();
+
+        const characters = this.fillCharacters();
+        const randNum = Math.floor(Math.random() * characters.length);
+        const randChar = characters[randNum];
+        const that = this;
+
+
+        this.canvas.addEventListener('click',(e) => {
+        const rect = this.canvas.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+            if (randChar.hitCheck(x,y)) {
+                randChar.dead(ctx);
+                console.log('hit');
+            } else {
+                console.log('miss');
+            }
+            // console.log('characters');
+        });
+
+            setTimeout(function() {
+                randChar.draw(ctx);
+                that.characterRun(ctx);
+            },3000)
+
+    }
 
 
 

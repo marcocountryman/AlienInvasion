@@ -29,7 +29,7 @@ class Alien {
         
         setTimeout(
             shoot,
-            250
+            200
         )
         
     }
