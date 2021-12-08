@@ -1,6 +1,5 @@
 import Alien from "./alien.js";
 import Civilian from "./civilian.js";
-import Player from "./player.js";
 
 const CHARACTER_SIZE = [100,200];
 const POSITIONS = [[10,314],[600,400],[415,370],[215,390]];
@@ -19,10 +18,6 @@ class Game {
         this.killCount = 0;
         this.lives = 3;
       
-        // this.gameover = false;
-        // this.aliens = [];
-        // this.civilians = [];
-        // this.player = player;
     }
     //THIS FUNCTION GENERATES A NEW ALIEN INSTANCE WITH RANDOM POSITION.
     randomAlien() {
@@ -74,11 +69,11 @@ class Game {
             randChar.draw(ctx);
             
             const controller = new AbortController();
-            
+            // controller.abort();
             intCount += 1
 
-            if (intCount === 15) {
-                alert('level clear');
+            if (intCount === 20) {
+                alert('Sequence Over');
                 clearInterval(intervalId);
             }
             let that = this;
@@ -106,13 +101,32 @@ class Game {
             
         }.bind(this);
 
-        var intervalId = setInterval(gameRun,2200);
+        var intervalId = setInterval(gameRun,2500);
       
     }
     upgradeKillCount() {
      
      const killEl = document.querySelector('#kills')
      killEl.innerText = `Aliens Blasted : ${this.killCount}`
+    }
+
+    removeHeart() {
+        //HIDE THE THIRD HEART
+        if (this.lives === 2) {
+            const h3 = document.querySelector('#heart3');
+            h3.setAttribute("hidden","true")
+        }
+        //HIDE THE SECOND HEART
+        if (this.lives === 1) {
+            const h2 = document.querySelector('#heart2');
+            h2.setAttribute("hidden","true")
+        }
+        //HIDE THE FINAL HEART AT THIS POINT IT IS GAME OVER
+        if (this.lives === 0) {
+            const h1 = document.querySelector('#heart1')
+            h1.setAttribute("hidden","true");
+            // alert("gameover, there will be a restart button here")
+        }
     }
 }
 

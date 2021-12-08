@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const newGame = new Game(canvasEl);
     const gameView = new View(newGame,ctx,canvasEl);
 
-    // gameView.start();
+    gameView.start();
     
     
 

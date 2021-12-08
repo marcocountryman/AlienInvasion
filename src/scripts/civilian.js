@@ -32,6 +32,7 @@ class Civilian {
                 ctx.drawImage(img, this.pos[0],this.pos[1],this.size[0],this.size[1]);
 
             }.bind(this);
+            
             setTimeout(
                 shoot,
                 600

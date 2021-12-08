@@ -11,6 +11,10 @@
   border-radius: 25px;
 }
 
+#alien-canvas:hover {
+  cursor: crosshair;
+}
+
 .canvas-container {
   display: flex;
   justify-content: center;
@@ -61,4 +65,9 @@ body {
 li > img {
   width: 60px;
   height: 60px;
+}
+
+.canvas-container > p {
+  color: orange;
+  width: 100px;
 }

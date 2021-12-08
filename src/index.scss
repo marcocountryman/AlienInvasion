@@ -7,10 +7,12 @@
     border: solid orange 5px;
     border-radius: 25px;
 }
+#alien-canvas:hover {
+    cursor: crosshair;
+}
 .canvas-container {
     display: flex;
     justify-content: center;
-    // margin-top: 50px;
 }
 .header {
     color: #8A2BE2;
@@ -26,7 +28,7 @@
     width: 250px;
 }
 body {
-  background-color: black;
+   background-color: black;
 }
 .lives {
     color: red;
@@ -55,4 +57,8 @@ body {
 li > img {
     width: 60px;
     height: 60px;
+}
+.canvas-container > p {
+    color: orange;
+    width: 100px;
 }
