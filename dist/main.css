@@ -67,7 +67,26 @@ li > img {
   height: 60px;
 }
 
-.canvas-container > p {
+.canvas-container > .start {
   color: orange;
-  width: 100px;
+  width: 500px;
+  position: fixed;
+  background-color: purple;
+  border: solid black 5px;
+  border-radius: 25px;
+  padding: 10px;
+  font-family: "Nova Script", cursive;
+  font-size: 20px;
+  margin-top: 140px;
+  display: flex;
+  flex-direction: column;
+}
+
+.start > #initiate {
+  font-size: 20px;
+  font-family: "Nova Script", cursive;
+  border-radius: 12px;
+  background-color: royalblue;
+  margin-left: 200px;
+  margin-right: 200px;
 }

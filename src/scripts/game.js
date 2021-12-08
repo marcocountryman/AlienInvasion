@@ -43,7 +43,7 @@ class Game {
     }
     //THIS FUNCTION FILLS THE CHARACTER ARRAY WITH FIFTEEN RANDOM CHARACTERS
     fillCharacters() {
-        for (let i = 0; i < 15; i++) {
+        for (let i = 0; i < 20; i++) {
             let character = this.randomCharacter();
             this.characters.push(character);
         }
@@ -65,14 +65,14 @@ class Game {
 
         const gameRun = function() {
             
-            let randChar = this.randomCharacter();
+            let randChar = this.characters.pop()
             randChar.draw(ctx);
-            
+            // debugger
             const controller = new AbortController();
             // controller.abort();
             intCount += 1
 
-            if (intCount === 20) {
+            if (intCount === 20 || this.characters.length === 0) {
                 alert('Sequence Over');
                 clearInterval(intervalId);
             }
@@ -89,7 +89,7 @@ class Game {
                 if (randChar.hitCheck(x,y)) {
                   
                     if (randChar instanceof Civilian) {
-                        alert('game over')
+                        // alert('game over')
                     }
                     randChar.dead(ctx);
                     that.killCount += 1;
@@ -101,7 +101,7 @@ class Game {
             
         }.bind(this);
 
-        var intervalId = setInterval(gameRun,2500);
+        var intervalId = setInterval(gameRun,3000);
       
     }
     upgradeKillCount() {

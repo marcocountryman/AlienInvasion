@@ -40,15 +40,25 @@
                     <div id = "kills">Aliens Blasted : 0</div>
             </div>
             <div class = "canvas-container">
-                <!-- <p id = "instruct">Welcome to the invasion! Aliens are trying to overrun the city and your mission is simple.
+                <div class = "start">
+                    <p id = "instruct">Welcome to the invasion! Aliens are trying to overrun the city and your mission is simple.
                     Shoot the aliens with the your blast cannon by clicking on the aliens with your mouse. Try to shoot the aliens before
                     they shoot you with their laser eyes. And remember, don't shoot the civilians! 
-                </p> -->
+                    </p>
+                    <button id = "initiate" onclick = "hideButton()">I'm Ready!</button>
+                    <script> 
+                    function hideButton() {
+                        document.querySelector('.start').style.display = 'none';
+                    }
+                    </script>
+                  
+                </div>
                 <canvas id = "alien-canvas" width = 800 height = 600></canvas>
             </div>
 
         </div>
     </div>
+
 </body>
 
 </html>

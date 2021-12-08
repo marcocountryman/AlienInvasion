@@ -32,10 +32,10 @@ class Civilian {
                 ctx.drawImage(img, this.pos[0],this.pos[1],this.size[0],this.size[1]);
 
             }.bind(this);
-            
+
             setTimeout(
                 shoot,
-                600
+                200
             )
         }
     }
@@ -44,8 +44,9 @@ class Civilian {
     //IF A CIVILIAN IS DEAD IT IS GAME OVER.
     dead(ctx) {
         this.alive = false;
-        ctx.fillStyle = 'black'
-        ctx.fillRect(this.pos[0],this.pos[1],this.size[0],this.size[1]);
+        ctx.clearRect(this.pos[0],this.pos[1],this.size[0],this.size[1])
+        var img = new Image(); img.src = "images/explosion.png";
+        ctx.drawImage(img, this.pos[0],this.pos[1],this.size[0],this.size[1]);
     }
     //THIS IS THE HIT CHECK THAT THE EVENT LISTENER WILL USE TO DETERMINE
     //IF A CHARACTER IS IN THE POSITION AT WHICH THE PLAYER IS CLICKING
