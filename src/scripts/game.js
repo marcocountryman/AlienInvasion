@@ -75,7 +75,7 @@ class Game {
             intCount += 1
 
             if (intCount === 20 || this.characters.length === 0) {
-                alert('Sequence Over');
+                this.renderClearMessage()
                 clearInterval(intervalId);
             }
             let that = this;
@@ -129,6 +129,10 @@ class Game {
             h1.setAttribute("hidden","true");
             // alert("gameover, there will be a restart button here")
         }
+    }
+    renderClearMessage() {
+        const message = document.querySelector('.levelclear');
+        message.style.visibility = 'visible'
     }
 }
 
