@@ -1,9 +1,11 @@
+// import Game from "./scripts/game.js"
 
 class Alien {
-    constructor(pos,size) {
+    constructor(pos,size,game) {
         this.pos = pos;
         this.size = size;
         this.alive = true;
+        this.game = game;
     }
     // THIS FUNCTION WILL RENDER THE ALIEN ON THE SCREEN
     // AFTER ONE SECOND THE ALIEN WILL SHOOT AT THE PLAYER
@@ -11,17 +13,17 @@ class Alien {
     //SCREEN
     draw(ctx) {
 
-        ctx.fillStyle = 'purple'
-        ctx.fillRect(this.pos[0],this.pos[1],this.size[0],this.size[1])
+        // ctx.fillStyle = 'purple'
+        // ctx.fillRect(this.pos[0],this.pos[1],this.size[0],this.size[1])
 
+        var img = new Image(); img.src = "images/alienalt.png";
+        ctx.drawImage(img, this.pos[0],this.pos[1],this.size[0],this.size[1]);
        
         let that = this;
         setTimeout( function() {that.response(ctx)}, 1000);
 
         setTimeout(function() {ctx.clearRect(0,0,800,600)}, 2000);
         
-        // var img = new Image(); img.src = "images/alien.png";
-        // ctx.drawImage(img, this.pos[0],this.pos[1],this.size[0],this.size[1]);
         
     }
     // THIS FUNCTION IS THE SHOOT FUNCTION AND THE SHOT WILL BE RENDERED ON SCREEN
@@ -30,8 +32,10 @@ class Alien {
         
         if (this.alive) {
             const shoot = function() {
-                ctx.fillStyle = "red"
-                ctx.fillRect(this.pos[0], this.pos[1],this.size[0],this.size[1]);
+                var img = new Image(); img.src = "images/alienaltlasereyes.png";
+                ctx.drawImage(img, this.pos[0],this.pos[1],this.size[0],this.size[1]);
+                this.game.lives -= 1;
+                console.log(this.game.lives);
             }.bind(this);
             
             setTimeout(
@@ -39,11 +43,6 @@ class Alien {
                 200
             )
         }
-        // setTimeout(
-        //     function() {ctx.clearRect(ctx.clearRect(0,0,800,600))},
-        //     400
-        // )
-        
     }
     //IF AN ALIEN IS SHOT THEY WILL BE MARKED AS DEAD
     //THIS WILL BE USED IN A LATER FUNCTION TO REMOVE DEAD ENEMIES
@@ -52,7 +51,6 @@ class Alien {
         ctx.fillStyle = 'black'
         ctx.fillRect(this.pos[0],this.pos[1],this.size[0],this.size[1])
 
-        // setTimeout(function() {ctx.clearRect(0,0,800,600)}, 500);
     }
     //THIS IS THE HIT CHECK THAT THE EVENT LISTENER WILL USE TO DETERMINE
     //IF A CHARACTER IS IN THE POSITION AT WHICH THE PLAYER IS CLICKING

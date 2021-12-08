@@ -10,17 +10,16 @@ class Civilian {
     //AFTER TWO SECONDS THE CIVILIAN WILL GET CLEARED FROM THE
     //SCREEN
     draw(ctx) {
-        ctx.fillStyle = 'orange'
-        ctx.fillRect(this.pos[0], this.pos[1],this.size[0],this.size[1]);
+
+        var img = new Image();
+        img.src = "images/scaredguyproj.png";
+        ctx.drawImage(img, this.pos[0],this.pos[1],this.size[0],this.size[1]);
 
         let that = this;
         setTimeout( function() {that.response(ctx)}, 1000);
         
         setTimeout(function() {ctx.clearRect(0,0,800,600)}, 2000);
 
-        // var img = new Image();
-        // img.src = "images/scaredwoman.png";
-        //  ctx.drawImage(img, this.pos[0],this.pos[1],this.size[0],this.size[1]);
     }
     // THIS FUNCTION IS THE MESSAGE FUNCTION A MESSAGE WILL BE RENDERED ON SCREEN.
     //FOR 200 MILLISECONDS
@@ -28,18 +27,16 @@ class Civilian {
 
         if (this.alive) {
             const shoot = function() {
-                ctx.fillStyle = "yellow"
-                ctx.fillRect(this.pos[0], this.pos[1],this.size[0],this.size[1]);
+
+                var img = new Image(); img.src = "images/scaredguyprojmessage.png";
+                ctx.drawImage(img, this.pos[0],this.pos[1],this.size[0],this.size[1]);
+
             }.bind(this);
             setTimeout(
                 shoot,
-                300
+                600
             )
         }
-        // setTimeout(
-        //     function() {ctx.clearRect(ctx.clearRect(0,0,800,600))},
-        //     600
-        // )  
     }
         
     //IF A CIVILIAN IS SHOT THEY WILL BE MARKED AS DEAD
@@ -48,8 +45,6 @@ class Civilian {
         this.alive = false;
         ctx.fillStyle = 'black'
         ctx.fillRect(this.pos[0],this.pos[1],this.size[0],this.size[1]);
-
-        // setTimeout(function() {ctx.clearRect(0,0,800,600)}, 500);
     }
     //THIS IS THE HIT CHECK THAT THE EVENT LISTENER WILL USE TO DETERMINE
     //IF A CHARACTER IS IN THE POSITION AT WHICH THE PLAYER IS CLICKING

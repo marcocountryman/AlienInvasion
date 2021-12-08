@@ -29,19 +29,30 @@ body {
   background-color: black;
 }
 .lives {
-    // color: red;
-    // display: flex;
+    color: red;
+    list-style: none;
+    display: flex;
+    margin-bottom: 0;
     // justify-content: space-evenly;
     // float: left;
 }
-.kill-count{
-    // color: red;
-    // float: right;
-}
-
-// .player-info {
-//     background-color: white;
-//     width: 800px;
-//     display: flex;
-//     justify-content: space-evenly;
+// .kill-count{
 // }
+#kills {
+    color: red;
+    font-family: 'Lobster', cursive;
+    font-size: 30px;
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+.player-info {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    width: 800px;
+    margin: auto;
+}
+li > img {
+    width: 60px;
+    height: 60px;
+}
