@@ -47,6 +47,7 @@ body {
   list-style: none;
   display: flex;
   margin-bottom: 0;
+  visibility: visible;
 }
 
 #kills {

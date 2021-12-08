@@ -19,7 +19,7 @@ class Alien {
         let that = this;
         setTimeout( function() {that.response(ctx)}, 1000);
 
-        setTimeout(function() {ctx.clearRect(0,0,800,600)}, 2000);
+        setTimeout(function() {ctx.clearRect(0,0,800,600)}, 2500);
         
         
     }

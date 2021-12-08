@@ -69,7 +69,7 @@ class Game {
             
             let randChar = this.characters.pop()
             randChar.draw(ctx);
-
+            console.log(randChar);
             const controller = new AbortController();
 
             intCount += 1
@@ -88,7 +88,7 @@ class Game {
                 const y = e.clientY - rect.top;
                 
                 controller.abort();
-                
+            
                 if (randChar.hitCheck(x,y)) {
                     
                     if (randChar instanceof Civilian) {
@@ -121,17 +121,17 @@ class Game {
 
         if (this.lives === 2) {
             const h3 = document.querySelector('#heart3');
-            h3.setAttribute("hidden","true")
+            h3.style.visibility = 'hidden';
         }
 
         if (this.lives === 1) {
             const h2 = document.querySelector('#heart2');
-            h2.setAttribute("hidden","true")
+            h2.style.visibility = 'hidden';
         }
 
         if (this.lives === 0) {
             const h1 = document.querySelector('#heart1')
-            h1.setAttribute("hidden","true");
+            h1.style.visibility = 'hidden';
             // alert("gameover, there will be a restart button here")
         }
     }
