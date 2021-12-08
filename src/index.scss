@@ -13,7 +13,6 @@
 .canvas-container {
     display: flex;
     justify-content: center;
-    // flex-direction: column;
 }
 .header {
     color:#00CED1;
@@ -93,6 +92,28 @@ li > img {
     font-size: 20px;
     margin-top: 140px;
     visibility: hidden;
+}
+
+.canvas-container > .gameover {
+    color: orange;
+    width: 500px;
+    position: fixed;
+    background-color: purple;
+    border: solid black 5px;
+    border-radius: 25px;
+    padding: 10px;
+    font-family: 'Nova Script', cursive;
+    font-size: 20px;
+    margin-top: 140px;
+    visibility: hidden;
+}
+#reset {
+    font-size: 20px;
+    font-family: 'Nova Script', cursive;
+    border-radius: 12px;
+    background-color: royalblue;
+    margin-left: 200px;
+    margin-right: 200px;
 }
 
 #restart {
