@@ -73,33 +73,41 @@ class Game {
             const controller = new AbortController();
 
             intCount += 1
-
+            // debugger
+            
             if (intCount === 20 || this.characters.length === 0) {
                 this.renderClearMessage()
                 clearInterval(intervalId);
             }
             let that = this;
-         
-            this.canvas.addEventListener('click', (e) => {
-
+            
+            function clickDetect(e) {
+                
                 const rect = that.canvas.getBoundingClientRect();
                 const x = e.clientX - rect.left;
                 const y = e.clientY - rect.top;
-
+                
                 controller.abort();
                 
                 if (randChar.hitCheck(x,y)) {
-                  
+                    
                     if (randChar instanceof Civilian) {
-                        // alert('game over')
+                        alert('game over')
+                        controller.abort()
                     }
                     randChar.dead(ctx);
                     that.killCount += 1;
                     that.upgradeKillCount()
-                   
+                    
                 } 
-
-            },{ signal: controller.signal} );
+                
+            }
+                //  if (randChar instanceof Civilian) {
+                //         alert('game over')
+                //     }
+            
+            this.canvas.addEventListener('click', clickDetect,{ signal: controller.signal} );
+            this.canvas.removeEventListener('click', clickDetect);
             
         }.bind(this);
 
