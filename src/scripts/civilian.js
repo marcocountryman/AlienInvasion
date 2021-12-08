@@ -11,9 +11,10 @@ class Civilian {
     //SCREEN
     draw(ctx) {
 
-        var img = new Image();
-        img.src = "images/scaredguyproj.png";
+        var img = new Image(); img.src = "images/scaredguyproj.png";
+
         ctx.drawImage(img, this.pos[0],this.pos[1],this.size[0],this.size[1]);
+        
 
         let that = this;
         setTimeout( function() {that.response(ctx)}, 1000);
@@ -28,8 +29,12 @@ class Civilian {
         if (this.alive) {
             const shoot = function() {
 
-                var img = new Image(); img.src = "images/scaredguyprojmessage.png";
+                var img = new Image(); 
+                img.src = "images/scaredguyprojmessage.png";
                 ctx.drawImage(img, this.pos[0],this.pos[1],this.size[0],this.size[1]);
+                
+               
+                
 
             }.bind(this);
 

@@ -16,7 +16,8 @@ class Game {
         this.characters = [];
         this.fillCharacters();
         this.killCount = 0;
-        this.lives = 3;
+        this.lives = 5;
+        this.gameover = false;
       
     }
     //THIS FUNCTION GENERATES A NEW ALIEN INSTANCE WITH RANDOM POSITION.
@@ -73,9 +74,10 @@ class Game {
             const controller = new AbortController();
 
             intCount += 1
-            // debugger
             
-            if (intCount === 15 || this.characters.length === 0) {
+            this.canvas.removeEventListener('click', clickDetect);
+            
+            if ((intCount === 15 || this.characters.length === 0) && (!this.gameover)) {
                 this.renderClearMessage()
                 clearInterval(intervalId);
             }
@@ -114,7 +116,7 @@ class Game {
     upgradeKillCount() {
      
      const killEl = document.querySelector('#kills')
-     killEl.innerText = `Aliens Blasted : ${this.killCount}`
+     killEl.innerText = `Blast Count : ${this.killCount}`
     }
 
     removeHeart() {
@@ -132,12 +134,16 @@ class Game {
         if (this.lives === 0) {
             const h1 = document.querySelector('#heart1')
             h1.style.visibility = 'hidden';
-            // alert("gameover, there will be a restart button here")
+            this.gameover = true;
+            // this.gameoverMessage();
         }
     }
     renderClearMessage() {
         const message = document.querySelector('.levelclear');
         message.style.visibility = 'visible'
+    }
+    gameoverMessage() {
+        // alert('game over')
     }
 }
 

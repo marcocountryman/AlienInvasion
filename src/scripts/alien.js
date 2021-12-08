@@ -14,9 +14,11 @@ class Alien {
     draw(ctx) {
 
         var img = new Image(); img.src = "images/alienalt.png";
+
         ctx.drawImage(img, this.pos[0],this.pos[1],this.size[0],this.size[1]);
-       
+
         let that = this;
+
         setTimeout( function() {that.response(ctx)}, 1000);
 
         setTimeout(function() {ctx.clearRect(0,0,800,600)}, 2500);
@@ -30,9 +32,12 @@ class Alien {
         if (this.alive) {
             const shoot = function() {
                 var img = new Image(); img.src = "images/alienaltlasereyes.png";
+             
                 ctx.drawImage(img, this.pos[0],this.pos[1],this.size[0],this.size[1]);
                 this.game.lives -= 1;
                 this.game.removeHeart()
+                
+                img.src = "images/alienaltlasereyes.png";
             }.bind(this);
             
             setTimeout(
