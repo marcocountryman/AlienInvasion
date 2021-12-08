@@ -2,12 +2,12 @@
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/
 #alien-canvas {
-  background-image: url("../images/background.png");
+  background-image: url("../images/backgroundlevel1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   text-align: center;
-  border: solid orange 5px;
+  border: solid #00CED1 5px;
   border-radius: 25px;
 }
 
@@ -21,7 +21,7 @@
 }
 
 .header {
-  color: #8A2BE2;
+  color: #00CED1;
   font-family: "Nova Script", cursive;
   font-size: 40px;
   display: flex;

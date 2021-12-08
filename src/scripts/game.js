@@ -77,9 +77,9 @@ class Game {
             
             this.canvas.removeEventListener('click', clickDetect);
             
-            if ((intCount === 15 || this.characters.length === 0) && (!this.gameover)) {
-                this.renderClearMessage()
+            if (intCount === 15 || this.characters.length === 0) {
                 clearInterval(intervalId);
+                this.renderClearMessage()
             }
             let that = this;
             
@@ -110,7 +110,7 @@ class Game {
             
         }.bind(this);
 
-        var intervalId = setInterval(gameRun,3000);
+        var intervalId = setInterval(gameRun,2500);
       
     }
     upgradeKillCount() {

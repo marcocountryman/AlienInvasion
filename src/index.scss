@@ -1,10 +1,10 @@
 #alien-canvas {
-    background-image: url("../images/background.png");
+    background-image: url("../images/backgroundlevel1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     text-align: center;
-    border: solid orange 5px;
+    border: solid #00CED1 5px;
     border-radius: 25px;
 }
 #alien-canvas:hover {
@@ -16,7 +16,7 @@
     // flex-direction: column;
 }
 .header {
-    color: #8A2BE2;
+    color:#00CED1;
     font-family: 'Nova Script', cursive;
     font-size: 40px;
     display: flex;
@@ -92,8 +92,6 @@ li > img {
     font-family: 'Nova Script', cursive;
     font-size: 20px;
     margin-top: 140px;
-    // display: flex;
-    // flex-direction: column;
     visibility: hidden;
 }
 

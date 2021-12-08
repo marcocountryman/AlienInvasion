@@ -11,7 +11,7 @@ class Civilian {
     //SCREEN
     draw(ctx) {
 
-        var img = new Image(); img.src = "images/scaredguyproj.png";
+        var img = new Image(); img.src = "images/scaredguy.png";
 
         ctx.drawImage(img, this.pos[0],this.pos[1],this.size[0],this.size[1]);
         
@@ -19,7 +19,7 @@ class Civilian {
         let that = this;
         setTimeout( function() {that.response(ctx)}, 1000);
         
-        setTimeout(function() {ctx.clearRect(0,0,800,600)}, 2000);
+        setTimeout(function() {ctx.clearRect(0,0,800,600)}, 2200);
 
     }
     // THIS FUNCTION IS THE MESSAGE FUNCTION A MESSAGE WILL BE RENDERED ON SCREEN.
@@ -29,13 +29,9 @@ class Civilian {
         if (this.alive) {
             const shoot = function() {
 
-                var img = new Image(); 
-                img.src = "images/scaredguyprojmessage.png";
+                var img = new Image(); img.src = "images/scaredguy.png";
                 ctx.drawImage(img, this.pos[0],this.pos[1],this.size[0],this.size[1]);
                 
-               
-                
-
             }.bind(this);
 
             setTimeout(
@@ -50,7 +46,7 @@ class Civilian {
     dead(ctx) {
         this.alive = false;
         ctx.clearRect(this.pos[0],this.pos[1],this.size[0],this.size[1])
-        var img = new Image(); img.src = "images/explosion.png";
+        var img = new Image(); img.src = "images/explode.png";
         ctx.drawImage(img, this.pos[0],this.pos[1],this.size[0],this.size[1]);
     }
     //THIS IS THE HIT CHECK THAT THE EVENT LISTENER WILL USE TO DETERMINE

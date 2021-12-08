@@ -13,7 +13,7 @@ class Alien {
     //SCREEN
     draw(ctx) {
 
-        var img = new Image(); img.src = "images/alienalt.png";
+        var img = new Image(); img.src = "images/alienfinal.png";
 
         ctx.drawImage(img, this.pos[0],this.pos[1],this.size[0],this.size[1]);
 
@@ -21,7 +21,7 @@ class Alien {
 
         setTimeout( function() {that.response(ctx)}, 1000);
 
-        setTimeout(function() {ctx.clearRect(0,0,800,600)}, 2500);
+        setTimeout(function() {ctx.clearRect(0,0,800,600)}, 2200);
         
         
     }
@@ -31,13 +31,13 @@ class Alien {
         
         if (this.alive) {
             const shoot = function() {
-                var img = new Image(); img.src = "images/alienaltlasereyes.png";
-             
+
+                ctx.clearRect(this.pos[0],this.pos[1],this.size[0],this.size[1])
+                var img = new Image(); img.src = "images/alienlasereyes.png";
                 ctx.drawImage(img, this.pos[0],this.pos[1],this.size[0],this.size[1]);
                 this.game.lives -= 1;
                 this.game.removeHeart()
                 
-                img.src = "images/alienaltlasereyes.png";
             }.bind(this);
             
             setTimeout(
@@ -51,7 +51,7 @@ class Alien {
     dead(ctx) {
         this.alive = false;
         ctx.clearRect(this.pos[0],this.pos[1],this.size[0],this.size[1])
-        var img = new Image(); img.src = "images/explosion.png";
+        var img = new Image(); img.src = "images/explode.png";
         ctx.drawImage(img, this.pos[0],this.pos[1],this.size[0],this.size[1]);
     }
     //THIS IS THE HIT CHECK THAT THE EVENT LISTENER WILL USE TO DETERMINE
