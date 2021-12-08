@@ -13,17 +13,24 @@
 .canvas-container {
     display: flex;
     justify-content: center;
+    // flex-direction: column;
 }
 .header {
     color: #8A2BE2;
     font-family: 'Nova Script', cursive;
-    font-size: 50px;
+    font-size: 40px;
     display: flex;
     justify-content: center;
     background-color: black;
 }
 .links {
     list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    margin: auto;
+    padding-top: 5px;
+
 }
 body {
    background-color: black;
@@ -48,8 +55,8 @@ body {
     margin: auto;
 }
 li > img {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
 }
 .canvas-container > .start {
     color: orange;
@@ -85,12 +92,12 @@ li > img {
     font-family: 'Nova Script', cursive;
     font-size: 20px;
     margin-top: 140px;
-    display: flex;
-    flex-direction: column;
+    // display: flex;
+    // flex-direction: column;
     visibility: hidden;
 }
 
-    #restart {
+#restart {
     font-size: 20px;
     font-family: 'Nova Script', cursive;
     border-radius: 12px;

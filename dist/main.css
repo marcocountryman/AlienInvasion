@@ -23,7 +23,7 @@
 .header {
   color: #8A2BE2;
   font-family: "Nova Script", cursive;
-  font-size: 50px;
+  font-size: 40px;
   display: flex;
   justify-content: center;
   background-color: black;
@@ -31,6 +31,11 @@
 
 .links {
   list-style: none;
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+  margin: auto;
+  padding-top: 5px;
 }
 
 body {
@@ -59,8 +64,8 @@ body {
 }
 
 li > img {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
 }
 
 .canvas-container > .start {
@@ -98,8 +103,6 @@ li > img {
   font-family: "Nova Script", cursive;
   font-size: 20px;
   margin-top: 140px;
-  display: flex;
-  flex-direction: column;
   visibility: hidden;
 }
 

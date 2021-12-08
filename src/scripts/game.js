@@ -43,7 +43,7 @@ class Game {
     }
     //THIS FUNCTION FILLS THE CHARACTER ARRAY WITH FIFTEEN RANDOM CHARACTERS
     fillCharacters() {
-        for (let i = 0; i < 20; i++) {
+        for (let i = 0; i < 15; i++) {
             let character = this.randomCharacter();
             this.characters.push(character);
         }
@@ -75,7 +75,7 @@ class Game {
             intCount += 1
             // debugger
             
-            if (intCount === 20 || this.characters.length === 0) {
+            if (intCount === 15 || this.characters.length === 0) {
                 this.renderClearMessage()
                 clearInterval(intervalId);
             }
@@ -92,7 +92,7 @@ class Game {
                 if (randChar.hitCheck(x,y)) {
                     
                     if (randChar instanceof Civilian) {
-                        alert('game over')
+                        // alert('game over')
                         controller.abort()
                     }
                     randChar.dead(ctx);
@@ -102,12 +102,9 @@ class Game {
                 } 
                 
             }
-                //  if (randChar instanceof Civilian) {
-                //         alert('game over')
-                //     }
             
             this.canvas.addEventListener('click', clickDetect,{ signal: controller.signal} );
-            this.canvas.removeEventListener('click', clickDetect);
+            // this.canvas.removeEventListener('click', clickDetect);
             
         }.bind(this);
 
