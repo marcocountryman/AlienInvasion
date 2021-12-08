@@ -30,9 +30,7 @@
 }
 
 .links {
-  display: flex;
-  justify-content: space-evenly;
-  width: 250px;
+  list-style: none;
 }
 
 body {
@@ -50,8 +48,6 @@ body {
   color: red;
   font-family: "Lobster", cursive;
   font-size: 30px;
-  border-bottom: 0;
-  padding-bottom: 0;
 }
 
 .player-info {

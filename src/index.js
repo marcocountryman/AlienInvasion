@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const gameView = new View(newGame,ctx,canvasEl);
 
     const initiateButton = document.querySelector("#initiate");
-    const intro = document.querySelector(".start")
 
     initiateButton.addEventListener('click', (e) => {
         gameView.start()

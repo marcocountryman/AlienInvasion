@@ -59,6 +59,8 @@ class Game {
         return array;
     }
     //THIS FUNCTION IS OPERATIONAL...
+    //THE MAIN PROBLEM HERE IS THAT THE EVENT LISTENERS ARE STACKING WHEN THERE IS NO CLICK
+    //I NEED TO REMOVE THE PREVIOUS EVENT LISTENER I THINK BEFORE ADDING ANOTHER ONE.
     characterSequence(ctx) {
     
         let intCount = 0;
@@ -67,9 +69,9 @@ class Game {
             
             let randChar = this.characters.pop()
             randChar.draw(ctx);
-            // debugger
+
             const controller = new AbortController();
-            // controller.abort();
+
             intCount += 1
 
             if (intCount === 20 || this.characters.length === 0) {
@@ -111,17 +113,17 @@ class Game {
     }
 
     removeHeart() {
-        //HIDE THE THIRD HEART
+
         if (this.lives === 2) {
             const h3 = document.querySelector('#heart3');
             h3.setAttribute("hidden","true")
         }
-        //HIDE THE SECOND HEART
+
         if (this.lives === 1) {
             const h2 = document.querySelector('#heart2');
             h2.setAttribute("hidden","true")
         }
-        //HIDE THE FINAL HEART AT THIS POINT IT IS GAME OVER
+
         if (this.lives === 0) {
             const h1 = document.querySelector('#heart1')
             h1.setAttribute("hidden","true");

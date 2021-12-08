@@ -23,9 +23,7 @@
     background-color: black;
 }
 .links {
-    display: flex;
-    justify-content: space-evenly;
-    width: 250px;
+    list-style: none;
 }
 body {
    background-color: black;
@@ -35,17 +33,12 @@ body {
     list-style: none;
     display: flex;
     margin-bottom: 0;
-    // justify-content: space-evenly;
-    // float: left;
+    
 }
-// .kill-count{
-// }
 #kills {
     color: red;
     font-family: 'Lobster', cursive;
     font-size: 30px;
-    border-bottom: 0;
-    padding-bottom: 0;
 }
 .player-info {
     display: flex;

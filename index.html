@@ -10,25 +10,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nova+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="./dist/main.js"></script>
     <title>Alien Invasion</title>
 </head>
 
 <body>
     <header class = "header">
-        <!-- <div class = "logo">img</div> -->
+
         <div class = "title">Alien Invasion</div>
-        <!-- <div class = "links">
-            <div class = "github">github link</div>
-            <div class = "linkedin">linkin link</div>
-            <div class = "model"> modal link</div>
-        </div> -->
+ 
     </header>
     <div>
-        <!-- <div class = 'player-info'>
-            <div>Health</div>
-            <div>Aliens Blasted</div>
-        </div> -->
         <div class = "game-container">
 
             <div class = "player-info">
@@ -40,6 +33,7 @@
                     <div id = "kills">Aliens Blasted : 0</div>
             </div>
             <div class = "canvas-container">
+
                 <div class = "start">
                     <p id = "instruct">Welcome to the invasion! Aliens are trying to overrun the city and your mission is simple.
                     Shoot the aliens with the your blast cannon by clicking on the aliens with your mouse. Try to shoot the aliens before
@@ -54,8 +48,15 @@
                   
                 </div>
                 <canvas id = "alien-canvas" width = 800 height = 600></canvas>
+               
             </div>
-
+            <div>
+                <ul class = "links">
+                                    <li id = 'link1'><a href=""><i class="fa fa-github" style="font-size:48px"></i></a></li>
+                                    <li id = "link2"><a href=""><i class="fa fa-linkedin-square" style="font-size:48px"></i></a></li>
+                                    <li id = "link3"><a href=""></a></li>
+                </ul>
+            </div>
         </div>
     </div>
 
