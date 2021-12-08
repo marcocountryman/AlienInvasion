@@ -18,7 +18,6 @@ class Alien {
 
         setTimeout(function() {ctx.clearRect(0,0,800,600)}, 2200);
         
-        
     }
     response(ctx) {
         
