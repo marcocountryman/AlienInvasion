@@ -59,17 +59,17 @@ class Game {
         const gameRun = function() {
             
             let randChar = this.characters.pop()
-            if (intCount > 1) randChar.draw(ctx);
             const controller = new AbortController();
-
+            
+            if (this.gameover) clearInterval(intervalId);
+            
+            randChar.draw(ctx);
             intCount += 1
             
             this.canvas.removeEventListener('click', clickDetect);
             
 
-            if (this.gameover) clearInterval(intervalId)
-
-            if (intCount === 15 || this.characters.length === 0) {
+            if (intCount === 15) {
                 clearInterval(intervalId);
                 this.renderClearMessage()
             }
@@ -84,10 +84,7 @@ class Game {
                 controller.abort();
                 
                 if (randChar.hitCheck(x,y)) {
-                    
-                    // if (randChar instanceof Civilian) {
-                    //     this.gameoverMessage()
-                    // }
+  
                     randChar.dead(ctx);
                     that.killCount += 1;
                     that.upgradeKillCount()

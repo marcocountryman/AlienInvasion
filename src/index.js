@@ -13,7 +13,5 @@ document.addEventListener("DOMContentLoaded", function () {
     initiateButton.addEventListener('click', (e) => {
         gameView.start()
     });
-    
-    
-
+  
 });

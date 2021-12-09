@@ -9,8 +9,6 @@ class View {
     start() {
         this.game.characterSequence(this.context);
     }
-    reset() {
-        
-    }
+    
 }
 export default View;
