@@ -20,7 +20,7 @@
 
 <img src = "gameview.png">
 
-# Let's Tale Code:
+# Let's Talk Code:
 
 ```JS
  characterSequence(ctx) {
