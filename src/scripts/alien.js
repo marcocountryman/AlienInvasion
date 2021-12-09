@@ -27,8 +27,8 @@ class Alien {
                 ctx.clearRect(this.pos[0],this.pos[1],this.size[0],this.size[1])
                 var img = new Image(); img.src = "images/alienlasereyes.png";
                 ctx.drawImage(img, this.pos[0],this.pos[1],this.size[0],this.size[1]);
-                this.game.lives -= 1;
                 this.game.removeHeart()
+                this.game.lives -= 1;
                 
             }.bind(this);
             
