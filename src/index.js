@@ -31,9 +31,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-/*
-Background Music:
-https://mixkit.co/free-stock-music/hip-hop/
-Artist Arulo
-Non-License: (Public Domain)
-/*
+
+// Background Music:
+// https://mixkit.co/free-stock-music/hip-hop/
+// Artist Arulo
+// Non-License: (Public Domain)
