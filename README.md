@@ -1,38 +1,28 @@
-# alienInvasion
-# Background:
+# Alien Invasion
 
-Alien invasion is a click based shooting game. The city is being overrun by an alien invasion. The player will be ambushed by aliens armed with lasers. Aliens will randomly generate on the screen, after a brief delay, the randomly generated alien will shoot a laser at the player. The player must shoot the alien before being shot by the laser. A single shot will neutralize the alien. The player will lose health each time an alien lands a successful laser shot. 
+# About:
 
-Random bystanders will also be generated on the screen. If the player shoots a bystander, they will automatically lose the game. The player will also lose if they run out of health. After a successful level completion, the next level will proceed and more aliens will generate. The time between generation and laser shot will also decrease. Therefore, the next level will be harder.
+Alien invasion is a click based shooting game. Aliens and civilians will generate on the screen and the player has to "shoot" the aliens with their mouse before the alien shoots them. The foundation of this game is the utilization of a setInterval calling functions with setTimeouts. In this game, timing was key. This game was inspired by the retro shooting games at Dave & Busters wherein you would shoot at villains on screen with a plastic gun. Good times.
 
-# Functionality & MVPs:
-
-In Alien Invasion, there are several core features in game play. 
-* Players will be able to use their mouse to shoot aliens with a blast cannon. 
-* The cursor will be the aiming mark. Clicking will discharge the blast cannon. 
-* Random alien generation will also be a core feature. 
-* Animation will also be featured.
-
-# Wire Frame:
-
-<img src = "wire.png">
-
-* Nav links will include link to project repo on Github, my LinkedIn, and the About modal.
-* Game controls will be entirely conducted by mouse.
-* The cursor will assist players in aiming.
-* On the top left, the player's health will be displayed.
-* On the top right, the number of aliens blasted.
-
-# Technology:
+# Core Technology:
 
 * HTML, CSS, Javascript
 * Canvas API
 * Webpack
 
-# Implementation Timeline:
+# Functionality/MVPs:
+* Players will be able to use their mouse to shoot aliens with a blast cannon.
+* The cursor will be the aiming mark. Clicking will discharge the blast cannon.
+* Random alien generation will also be a core feature.
+* Accurate clicks will be detected.
 
-* Friday & Weekend: Generate file structure and webpack. Create view class, alien class, player class, and civilian class. Get classes rendered on screen and doing appopriate actions.
-* Monday: Fine tune the classes being rendered. Add additional levels.
-* Tuesday: Continue working on additional level logic and add animations to make game more lively.
-* Wednesday: Add sound effects and finishing touches.
-* Thursday Morning: Final touches on game before upload to heroku. Presentation prep.
+# Game View:
+
+<img src = "gameview.png">
+
+# How the Magic Works/ Game Sequence:
+
+<img src = "codelogic.png">
+
+This function is the key to how the game sequence runs. The setInterval calls the gameRun function and runs the sequence until the array of characters are empty or until the game is over.
+The characers appear and shoot at the player runs when draw instance method is called on the character instances. Dead characters cannot shoot at you, after they are clicked.

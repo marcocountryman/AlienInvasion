@@ -53,11 +53,8 @@ class Game {
         return array;
     }
     characterSequence(ctx) {
-    
         let intCount = 0;
-
         const gameRun = function() {
-            
             let randChar = this.characters.pop()
             const controller = new AbortController();
             
@@ -72,11 +69,9 @@ class Game {
                 clearInterval(intervalId);
                 this.renderClearMessage()
             }
-
             let that = this;
             
-            function clickDetect(e) {
-                
+            function clickDetect(e) {    
                 const rect = that.canvas.getBoundingClientRect();
                 const x = e.clientX - rect.left;
                 const y = e.clientY - rect.top;
@@ -87,18 +82,12 @@ class Game {
                     
                     randChar.dead(ctx);
                     that.killCount += 1;
-                    that.upgradeKillCount()
-                    
-                } 
-                
-            }
-            
+                    that.upgradeKillCount()  
+                }      
+            }      
             this.canvas.addEventListener('click', clickDetect,{ signal: controller.signal} );
-            
         }.bind(this);
-        
         var intervalId = setInterval(gameRun,2500);
-        
     }
     upgradeKillCount() {
      
