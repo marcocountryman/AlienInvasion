@@ -25,4 +25,4 @@ Alien invasion is a click based shooting game. Aliens and civilians will generat
 <img src = "codelogic.png">
 
 This function is the key to how the game sequence runs. The setInterval calls the gameRun function and runs the sequence until the array of characters are empty or until the game is over.
-The characers appear and shoot at the player runs when draw instance method is called on the character instances. Dead characters cannot shoot at you, after they are clicked.
+The characters appear and shoot at the player runs when draw instance method is called on the character instances. Dead characters cannot shoot at you, after they are clicked.
