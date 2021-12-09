@@ -23,10 +23,13 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
             backgroundMusic.pause();
         }
+        document.removeEventListener('click', playLaser);
     });
-    document.addEventListener('click', (e) => {
-        laserSound.play();
-    });
+    document.addEventListener('click', playLaser)
+
+    function playLaser() {
+        laserSound.play()
+    }
   
 });
 
