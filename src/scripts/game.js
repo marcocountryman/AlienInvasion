@@ -42,6 +42,8 @@ class Game {
             let character = this.randomCharacter();
             this.characters.push(character);
         }
+        const civ = this.randomCharacter()
+        this.characters.push(civ);
     }
     shuffle(array) {
         for (let i = 0; i < array.length; i++) {
