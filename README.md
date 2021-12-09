@@ -2,7 +2,7 @@
 
 # About:
 
-Alien invasion is a click based shooting game. Aliens and civilians will generate on the screen and the player has to "shoot" the aliens with their mouse before the alien shoots them. The foundation of this game is the utilization of a setInterval calling functions with setTimeouts. In this game, timing was key. This game was inspired by the retro shooting games at Dave & Busters wherein you would shoot at villains on screen with a plastic gun. Good times.
+[Alien Invasion](https://marcocountryman.github.io/alienInvasion/index.html) is a click based shooting game. Aliens and civilians will generate on the screen and the player has to "shoot" the aliens with their mouse before the alien shoots them. The foundation of this game is the utilization of a setInterval calling functions with setTimeouts. In this game, timing was key. This game was inspired by the retro shooting games at Dave & Busters wherein you would shoot at villains on screen with a plastic gun. Good times.
 
 # Core Technology:
 
