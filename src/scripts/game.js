@@ -62,17 +62,17 @@ class Game {
             const controller = new AbortController();
             
             if (this.gameover) clearInterval(intervalId);
-            
+        
             randChar.draw(ctx);
             intCount += 1
             
             this.canvas.removeEventListener('click', clickDetect);
             
-
-            if (intCount === 15) {
+            if (!this.characters.length) {
                 clearInterval(intervalId);
                 this.renderClearMessage()
             }
+
             let that = this;
             
             function clickDetect(e) {
@@ -84,7 +84,7 @@ class Game {
                 controller.abort();
                 
                 if (randChar.hitCheck(x,y)) {
-  
+                    
                     randChar.dead(ctx);
                     that.killCount += 1;
                     that.upgradeKillCount()
@@ -96,9 +96,9 @@ class Game {
             this.canvas.addEventListener('click', clickDetect,{ signal: controller.signal} );
             
         }.bind(this);
-
+        
         var intervalId = setInterval(gameRun,2500);
-      
+        
     }
     upgradeKillCount() {
      

@@ -8,6 +8,7 @@ class View {
     //STARTS GAME
     start() {
         this.game.characterSequence(this.context);
+        
     }
     
 }
