@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
     initiateButton.addEventListener('click', (e) => {
         gameView.start()
-        backgroundMusic.play();
+        // backgroundMusic.play();
     });
     musicController.addEventListener('click',(e) => {
         if (backgroundMusic.paused) {
@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         document.removeEventListener('click', playLaser);
     });
+
     canvasEl.addEventListener('click', playLaser)
 
     function playLaser() {

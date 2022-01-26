@@ -1,3 +1,152 @@
-#alien-canvas{background-image:url("../images/backgroundlevel1.jpg");background-repeat:no-repeat;background-size:cover;background-position:center;text-align:center;border:solid #00ced1 5px;border-radius:25px}#alien-canvas:hover{cursor:crosshair}.canvas-container{display:flex;justify-content:center}.header{color:#00ced1;font-family:"Nova Script",cursive;font-size:40px;display:flex;justify-content:center;background-color:#000}.links{list-style:none;display:flex;justify-content:space-between;width:150px;margin:auto;padding-top:5px}body{background-color:#000}.lives{color:red;list-style:none;display:flex;margin-bottom:0;visibility:visible}#kills{color:red;font-family:"Lobster",cursive;font-size:30px}.player-info{display:flex;justify-content:space-between;background-color:#000;width:800px;margin:auto}li>img{width:50px;height:50px}.canvas-container>.start{color:orange;width:500px;position:fixed;background-color:purple;border:solid #000 5px;border-radius:25px;padding:10px;font-family:"Nova Script",cursive;font-size:20px;margin-top:140px;display:flex;flex-direction:column}.start>#initiate{font-size:20px;font-family:"Nova Script",cursive;border-radius:12px;background-color:#4169e1;margin-left:200px;margin-right:200px}.canvas-container>.levelclear{color:orange;width:500px;position:fixed;background-color:purple;border:solid #000 5px;border-radius:25px;padding:10px;font-family:"Nova Script",cursive;font-size:20px;margin-top:140px;visibility:hidden}.canvas-container>.gameover{color:orange;width:500px;position:fixed;background-color:purple;border:solid #000 5px;border-radius:25px;padding:10px;font-family:"Nova Script",cursive;font-size:20px;margin-top:140px;visibility:hidden}#reset{font-size:20px;font-family:"Nova Script",cursive;border-radius:12px;background-color:#4169e1;margin-left:200px;margin-right:200px}#restart{font-size:20px;font-family:"Nova Script",cursive;border-radius:12px;background-color:#4169e1;margin-left:200px;margin-right:200px}footer{color:#fff;width:250px;float:right}#music{font-size:50px;background-color:#000;border-radius:12px}
+/*!*************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
+  \*************************************************************************************************************************************/
+#alien-canvas {
+  background-image: url("../images/backgroundlevel1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  border: solid #00CED1 5px;
+  border-radius: 25px;
+}
 
-/*# sourceMappingURL=main.css.map*/
+#alien-canvas:hover {
+  cursor: crosshair;
+}
+
+.canvas-container {
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  color: #00CED1;
+  font-family: "Nova Script", cursive;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  background-color: black;
+}
+
+.links {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+  margin: auto;
+  padding-top: 5px;
+}
+
+body {
+  background-color: black;
+}
+
+.lives {
+  color: red;
+  list-style: none;
+  display: flex;
+  margin-bottom: 0;
+  visibility: visible;
+}
+
+#kills {
+  color: red;
+  font-family: "Lobster", cursive;
+  font-size: 30px;
+}
+
+.player-info {
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  width: 800px;
+  margin: auto;
+}
+
+li > img {
+  width: 50px;
+  height: 50px;
+}
+
+.canvas-container > .start {
+  color: orange;
+  width: 500px;
+  position: fixed;
+  background-color: purple;
+  border: solid black 5px;
+  border-radius: 25px;
+  padding: 10px;
+  font-family: "Nova Script", cursive;
+  font-size: 20px;
+  margin-top: 140px;
+  display: flex;
+  flex-direction: column;
+}
+
+.start > #initiate {
+  font-size: 20px;
+  font-family: "Nova Script", cursive;
+  border-radius: 12px;
+  background-color: royalblue;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+.canvas-container > .levelclear {
+  color: orange;
+  width: 500px;
+  position: fixed;
+  background-color: purple;
+  border: solid black 5px;
+  border-radius: 25px;
+  padding: 10px;
+  font-family: "Nova Script", cursive;
+  font-size: 20px;
+  margin-top: 140px;
+  visibility: hidden;
+}
+
+.canvas-container > .gameover {
+  color: orange;
+  width: 500px;
+  position: fixed;
+  background-color: purple;
+  border: solid black 5px;
+  border-radius: 25px;
+  padding: 10px;
+  font-family: "Nova Script", cursive;
+  font-size: 20px;
+  margin-top: 140px;
+  visibility: hidden;
+}
+
+#reset {
+  font-size: 20px;
+  font-family: "Nova Script", cursive;
+  border-radius: 12px;
+  background-color: royalblue;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+#restart {
+  font-size: 20px;
+  font-family: "Nova Script", cursive;
+  border-radius: 12px;
+  background-color: royalblue;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+footer {
+  color: white;
+  width: 250px;
+  float: right;
+}
+
+#music {
+  font-size: 50px;
+  background-color: black;
+  border-radius: 12px;
+}

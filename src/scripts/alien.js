@@ -5,6 +5,7 @@ class Alien {
         this.size = size;
         this.alive = true;
         this.game = game;
+        this.type = 'alien';
     }
     draw(ctx) {
         let that = this;

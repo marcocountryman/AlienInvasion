@@ -4,6 +4,7 @@ class Civilian {
         this.size = size;
         this.color = color;
         this.alive = true; 
+        this.type = "civilian";
     }
     draw(ctx) {
         let that = this;
@@ -16,7 +17,7 @@ class Civilian {
 
         setTimeout( function() {that.response(ctx)}, 1000);
         
-        setTimeout(function() {ctx.clearRect(0,0,800,600)}, 2200);
+        setTimeout(function() {ctx.clearRect(0,0,800,600)}, 2000);
 
     }
     response(ctx) {

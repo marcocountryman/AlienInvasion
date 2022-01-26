@@ -42,7 +42,7 @@ class Game {
             let character = this.randomCharacter();
             this.characters.push(character);
         }
-        const civ = this.randomCharacter()
+        const civ = this.randomCivilian()
         this.characters.unshift(civ);
     }
     shuffle(array) {
@@ -56,6 +56,7 @@ class Game {
     }
     characterSequence(ctx) {
         let intCount = 0;
+
         const gameRun = function() {
             let randChar = this.characters.pop()
             const controller = new AbortController();
@@ -85,12 +86,14 @@ class Game {
                     randChar.dead(ctx);
                     that.killCount += 1;
                     that.upgradeKillCount()  
-                }      
+                }
+               
             }      
             this.canvas.addEventListener('click', clickDetect,{ signal: controller.signal} );
         }.bind(this);
-        var intervalId = setInterval(gameRun,2500);
+        var intervalId = setInterval(gameRun,2400);
     }
+
     upgradeKillCount() {
      
      const killEl = document.querySelector('#kills')
