@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         document.removeEventListener('click', playLaser);
     });
-    document.addEventListener('click', playLaser)
+    canvasEl.addEventListener('click', playLaser)
 
     function playLaser() {
         laserSound.play()
