@@ -1,4 +1,3 @@
-
 class Alien {
     constructor(pos,size,game) {
         this.pos = pos;
@@ -32,6 +31,8 @@ class Alien {
                     ctx.drawImage(img, that.pos[0],that.pos[1],that.size[0],that.size[1]);
                 }
                 img.src = "images/alienlasereyes.png";
+                var laserSound = new Audio('sound/lasergun.mp3');
+                laserSound.play();
 
                 this.game.lives -= 1;
                 this.game.removeHeart()

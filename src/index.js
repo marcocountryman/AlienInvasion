@@ -11,7 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const initiateButton = document.querySelector("#initiate");
     const musicController = document.querySelector('#music')
     var backgroundMusic = new Audio('sound/music.mp3');
-    var laserSound = new Audio('sound/lasergun.mp3');
+    // var laserSound = new Audio('sound/lasergun.mp3');
+    var gunSound = new Audio('sound/player-gun.mp3');
     
     initiateButton.addEventListener('click', (e) => {
         gameView.start()
@@ -26,10 +27,10 @@ document.addEventListener("DOMContentLoaded", function () {
         document.removeEventListener('click', playLaser);
     });
 
-    canvasEl.addEventListener('click', playLaser)
+    canvasEl.addEventListener('click', playGunSound)
 
-    function playLaser() {
-        laserSound.play()
+    function playGunSound() {
+        gunSound.play()
     }
   
 });
