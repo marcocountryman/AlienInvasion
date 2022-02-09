@@ -15,22 +15,24 @@
     justify-content: center;
 }
 .header {
+    display: flex;
+    justify-content: space-between;
     color:#00CED1;
     font-family: 'Nova Script', cursive;
     font-size: 40px;
-    display: flex;
-    justify-content: center;
     background-color: #8900f2;
     margin-bottom: 10px;
 }
+.ufo-logo {
+    width: 75px;
+    height: 75px;
+}
+
 .links {
     list-style: none;
     display: flex;
     justify-content: space-between;
     width: 150px;
-    margin: auto;
-    padding-top: 5px;
-
 }
 body {
    background-color: black;
@@ -135,11 +137,7 @@ li > img {
     margin-right: 200px;
     border: none;
 }
-footer {
-    color: white;
-    width:250px;
-    float: right;
-}
+
 #music {
     font-size: 50px;
     background-color: black;
