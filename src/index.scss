@@ -24,14 +24,14 @@
     margin-bottom: 10px;
 }
 .ufo-logo {
-    width: 75px;
-    height: 75px;
+    width: 60px;
+    height: 60px;
 }
 
 .links {
     list-style: none;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 150px;
 }
 body {
@@ -148,3 +148,5 @@ li > img {
 body button {
     cursor: pointer;
 }
+
+.fa fa-linkedin-square
