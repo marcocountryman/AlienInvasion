@@ -17,12 +17,19 @@
 .header {
     display: flex;
     justify-content: space-between;
+    background-color: #8900f2;
+    margin-bottom: 10px;
+    padding-top: 10px;
+}
+
+.title {
+    padding-left: 30px;
+    width: 300px;
     color:#00CED1;
     font-family: 'Nova Script', cursive;
     font-size: 40px;
-    background-color: #8900f2;
-    margin-bottom: 10px;
 }
+
 .ufo-logo {
     width: 60px;
     height: 60px;
@@ -149,4 +156,6 @@ body button {
     cursor: pointer;
 }
 
-.fa fa-linkedin-square
+i {
+    color: lightgray;
+}
