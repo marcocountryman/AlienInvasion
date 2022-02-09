@@ -38,7 +38,7 @@ class Game {
         return randomCall[pos]
     }
     fillCharacters() {
-        for (let i = 0; i < 10; i++) {
+        for (let i = 0; i < 13; i++) {
             let character = this.randomCharacter();
             this.characters.push(character);
         }
