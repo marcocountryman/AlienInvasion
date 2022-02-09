@@ -14,7 +14,10 @@ class Civilian {
             ctx.drawImage(img, that.pos[0],that.pos[1],that.size[0],that.size[1]);
         }
         img.src = "images/scaredguy.png";
-
+        
+        var screamSound = new Audio('sound/willhelm-scream.mp3');
+        screamSound.play();
+        
         setTimeout( function() {that.response(ctx)}, 1000);
         
         setTimeout(function() {ctx.clearRect(0,0,800,600)}, 2000);

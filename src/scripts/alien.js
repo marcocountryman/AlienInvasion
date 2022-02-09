@@ -15,6 +15,9 @@ class Alien {
         }
         img.src = "images/alienfinal.png";
 
+        var teleportSound = new Audio('sound/teleport.mp3');
+        teleportSound.play();
+
         setTimeout( function() {that.response(ctx)}, 1000);
 
         setTimeout(function() {ctx.clearRect(0,0,800,600)}, 2200);
