@@ -18,61 +18,63 @@
 </head>
 
 <body>
-    <header class = "header">
+    <div class = "container-supreme">
+        <header class = "header">
 
-        <div class = "title">Alien Invasion</div>
- 
-    </header>
-    <div>
-        <div class = "game-container">
+            <div class = "title">Alien Invasion</div>
+    
+        </header>
+        <div>
+            <div class = "game-container">
 
-            <div class = "player-info">
-                <ul class = "lives">
-                    <li id = "heart1" ><img src="images/fingerheart.png" alt=""></li>
-                    <li id = "heart2" ><img src="images/fingerheart.png" alt=""></li>
-                    <li id = "heart3" ><img src="images/fingerheart.png" alt=""></li>
-                </ul>
-                    <button id = "music">&#127908</button>
-                    <div id = "kills">Blast Count : 0</div>
-            </div>
-            <div class = "canvas-container">
-
-                <div class = "start">
-                    <p id = "instruct">Welcome to the invasion! Aliens are trying to overrun the city and your mission is simple.
-                    Point at the aliens and shoot them with your mouse. Try to shoot the aliens before they shoot you with their laser eyes. And remember, try not to shoot the civilians! 
-                    </p>
-                    <button id = "initiate" onclick = "hideButton()">I'm Ready!</button>
-                    <script> 
-                    function hideButton() {
-                        document.querySelector('.start').style.display = 'none';
-                    }
-                    </script>
-                  
+                <div class = "player-info">
+                    <ul class = "lives">
+                        <li id = "heart1" ><img src="images/fingerheart.png" alt=""></li>
+                        <li id = "heart2" ><img src="images/fingerheart.png" alt=""></li>
+                        <li id = "heart3" ><img src="images/fingerheart.png" alt=""></li>
+                    </ul>
+                        <button id = "music">&#127908</button>
+                        <div id = "kills">Blast Count : 0</div>
                 </div>
-                <canvas id = "alien-canvas" width = 800 height = 600></canvas>
+                <div class = "canvas-container">
 
-                <div class = "levelclear">
-                    <p id = "clearmessage">
-                        Congratulations! You survived!
-                    </p>
-                    <a href="index.html"><button id = "restart">Play Again!</button></a>
-                </div>
-
-                <div class = "gameover">
-                    <p id = 'gameovermessage'>
-                        You died. Please try again.
-                    </p>
-                    <a href="index.html"><button id="reset">Try Again!</button></a>
-                </div>
-
-
-            </div>
-            <div class = 'bottom-content'>
-                <ul class="links">
+                    <div class = "start">
+                        <p id = "instruct">Welcome to the invasion! Aliens are trying to overrun the city and your mission is simple.
+                        Point at the aliens and shoot them with your mouse. Try to shoot the aliens before they shoot you with their laser eyes. And remember, try not to shoot the civilians! 
+                        </p>
+                        <button id = "initiate" onclick = "hideButton()">I'm Ready!</button>
+                        <script> 
+                        function hideButton() {
+                            document.querySelector('.start').style.display = 'none';
+                        }
+                        </script>
                     
-                    <li id='link1'><a href="https://github.com/marcocountryman" target = "_blank"><i class="fa fa-github" style="font-size:48px"></i></a></li>
-                    <li id="link2"><a href="https://www.linkedin.com/in/marco-countryman-40492922a/" target = "_blank"><i class="fa fa-linkedin-square" style="font-size:48px"></i></a></li>
-                </ul>
+                    </div>
+                    <canvas id = "alien-canvas" width = 800 height = 600></canvas>
+
+                    <div class = "levelclear">
+                        <p id = "clearmessage">
+                            Congratulations! You survived!
+                        </p>
+                        <a href="index.html"><button id = "restart">Play Again!</button></a>
+                    </div>
+
+                    <div class = "gameover">
+                        <p id = 'gameovermessage'>
+                            You died. Please try again.
+                        </p>
+                        <a href="index.html"><button id="reset">Try Again!</button></a>
+                    </div>
+
+
+                </div>
+                <div class = 'bottom-content'>
+                    <ul class="links">
+                        
+                        <li id='link1'><a href="https://github.com/marcocountryman" target = "_blank"><i class="fa fa-github" style="font-size:48px"></i></a></li>
+                        <li id="link2"><a href="https://www.linkedin.com/in/marco-countryman-40492922a/" target = "_blank"><i class="fa fa-linkedin-square" style="font-size:48px"></i></a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

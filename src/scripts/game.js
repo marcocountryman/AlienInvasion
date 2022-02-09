@@ -44,6 +44,7 @@ class Game {
         }
         const civ = this.randomCivilian()
         this.characters.unshift(civ);
+        this.characters.push(civ);
     }
     shuffle(array) {
         for (let i = 0; i < array.length; i++) {

@@ -7,7 +7,7 @@
   background-size: cover;
   background-position: center;
   text-align: center;
-  border: solid #00CED1 5px;
+  border: solid #ffdd00 3px;
   border-radius: 25px;
 }
 
@@ -26,7 +26,7 @@
   font-size: 40px;
   display: flex;
   justify-content: center;
-  background-color: purple;
+  background-color: #8900f2;
   margin-bottom: 10px;
 }
 
@@ -41,6 +41,13 @@
 
 body {
   background-color: black;
+}
+
+.container-supreme {
+  background-image: url("../images/city-back.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
 }
 
 .lives {
@@ -60,7 +67,7 @@ body {
 .player-info {
   display: flex;
   justify-content: space-between;
-  background-color: black;
+  background-color: transparent;
   width: 800px;
   margin: auto;
 }
@@ -71,10 +78,10 @@ li > img {
 }
 
 .canvas-container > .start {
-  color: orange;
+  color: #ffdd00;
   width: 500px;
   position: fixed;
-  background-color: purple;
+  background-color: #8900f2;
   border: solid black 5px;
   border-radius: 25px;
   padding: 10px;
@@ -89,16 +96,17 @@ li > img {
   font-size: 20px;
   font-family: "Nova Script", cursive;
   border-radius: 12px;
-  background-color: royalblue;
+  background-color: #5591f5;
   margin-left: 200px;
   margin-right: 200px;
+  border: none;
 }
 
 .canvas-container > .levelclear {
-  color: orange;
+  color: #ffdd00;
   width: 500px;
   position: fixed;
-  background-color: purple;
+  background-color: #8900f2;
   border: solid black 5px;
   border-radius: 25px;
   padding: 10px;
@@ -109,10 +117,10 @@ li > img {
 }
 
 .canvas-container > .gameover {
-  color: orange;
+  color: #ffdd00;
   width: 500px;
   position: fixed;
-  background-color: purple;
+  background-color: #8900f2;
   border: solid black 5px;
   border-radius: 25px;
   padding: 10px;
@@ -126,18 +134,20 @@ li > img {
   font-size: 20px;
   font-family: "Nova Script", cursive;
   border-radius: 12px;
-  background-color: royalblue;
+  background-color: #5591f5;
   margin-left: 200px;
   margin-right: 200px;
+  border: none;
 }
 
 #restart {
   font-size: 20px;
   font-family: "Nova Script", cursive;
   border-radius: 12px;
-  background-color: royalblue;
+  background-color: #5591f5;
   margin-left: 200px;
   margin-right: 200px;
+  border: none;
 }
 
 footer {
@@ -150,4 +160,9 @@ footer {
   font-size: 50px;
   background-color: black;
   border-radius: 12px;
+  cursor: pointer;
+}
+
+body button {
+  cursor: pointer;
 }
