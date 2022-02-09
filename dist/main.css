@@ -22,7 +22,7 @@
 
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   background-color: #8900f2;
   margin-bottom: 10px;
   padding-top: 10px;
@@ -44,7 +44,7 @@
 .links {
   list-style: none;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   width: 150px;
 }
 
@@ -171,5 +171,10 @@ body button {
 }
 
 i {
-  color: lightgray;
+  color: #8900f2;
+}
+
+.bottom-content {
+  display: flex;
+  justify-content: center;
 }
