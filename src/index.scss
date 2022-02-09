@@ -19,7 +19,6 @@
     justify-content: center;
     background-color: #8900f2;
     margin-bottom: 10px;
-    padding-top: 10px;
 }
 
 .title {
@@ -49,31 +48,35 @@ body {
     background-image: url("../images/city-back.jpg");
     background-repeat: no-repeat;
     background-position: center;
-    height: 100vh;
+    height: 98vh;
 }
 .lives {
     color: red;
     list-style: none;
     display: flex;
-    margin-bottom: 0;
     visibility: visible;
+
 }
 #kills {
     color: red;
     font-family: 'Lobster', cursive;
     font-size: 30px;
+    height: 40px;
 }
 .player-info {
     display: flex;
     justify-content: space-between;
     background-color: transparent;
     width: 800px;
-    margin: auto;
+    height: 50px;
+    margin-bottom: 10px;
 }
-li > img {
+
+div > img {
     width: 50px;
     height: 50px;
 }
+
 .canvas-container > .start {
     color: #ffdd00;
     width: 500px;
@@ -132,7 +135,6 @@ li > img {
     background-color: #5591f5;
     margin-left: 200px;
     margin-right: 200px;
-    border: none;
 }
 
 #restart {
@@ -142,14 +144,14 @@ li > img {
     background-color: #5591f5;
     margin-left: 200px;
     margin-right: 200px;
-    border: none;
 }
 
 #music {
-    font-size: 50px;
-    background-color: black;
+    font-size: 40px;
+    background-color: transparent;
     border-radius: 12px;
     cursor: pointer;
+    border: none;
 }
 
 body button {
@@ -163,4 +165,10 @@ i {
 .bottom-content {
     display: flex;
     justify-content: center;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

@@ -22,8 +22,12 @@ document.addEventListener("DOMContentLoaded", function () {
     musicController.addEventListener('click',(e) => {
         if (gameMusic.paused) {
             gameMusic.play();
+            const musicButton = document.getElementById('music');
+            musicButton.innerHTML = "&#128266";
         } else {
             gameMusic.pause();
+            const musicButton = document.getElementById('music');
+            musicButton.innerHTML = "&#128264";
         }
     });
 
